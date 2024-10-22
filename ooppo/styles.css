@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1e3f66; /* خلفية زرقاء */
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#title {
+    font-size: 3em;
+    opacity: 0;
+    animation: fadeIn 5s steps(14) forwards; /* 14 هو عدد الحروف في "Winter is Coming" */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.rain-drop {
+    position: absolute;
+    background-color: #7db9e8;
+    width: 5px;
+    height: 15px;
+    opacity: 0.8;
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 0.8;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
